@@ -1,9 +1,13 @@
 import React from 'react'
 
-type Alphabet = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z'
+type UpperCase = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z'
+type LowerCase = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z'
+type Alphabet = LowerCase | UpperCase
+type ShiftNum = '!' | '@' | '#' | '$' | '%' | '^' | '&' | '*' | '(' | ')'
 type FKeys = 'F1' | 'F2' | 'F3' | 'F4' | 'F5' | 'F6' | 'F7' | 'F8' | 'F9' | 'F10' | 'F11' | 'F12'
-type SpecialKeys = 'Control' | 'Alt'
-type Key = Alphabet | FKeys | SpecialKeys
+type SpecialKeys = 'Control' | 'Alt' | 'Backspace' | 'Tab' | 'Shift' | 'Enter' | 'End'
+type Arrows = 'ArrowUp' | 'ArrowDown' | 'ArrowRight' | 'ArrowLeft'
+type Key = Alphabet | FKeys | SpecialKeys | Arrows | ShiftNum
 
 class KeysState {
   private keys: Map<string, boolean> = new Map()

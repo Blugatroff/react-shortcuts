@@ -1,7 +1,11 @@
-declare type Alphabet = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z';
+declare type UpperCase = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z';
+declare type LowerCase = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z';
+declare type Alphabet = LowerCase | UpperCase;
+declare type ShiftNum = '!' | '@' | '#' | '$' | '%' | '^' | '&' | '*' | '(' | ')';
 declare type FKeys = 'F1' | 'F2' | 'F3' | 'F4' | 'F5' | 'F6' | 'F7' | 'F8' | 'F9' | 'F10' | 'F11' | 'F12';
-declare type SpecialKeys = 'Control' | 'Alt';
-declare type Key = Alphabet | FKeys | SpecialKeys;
+declare type SpecialKeys = 'Control' | 'Alt' | 'Backspace' | 'Tab' | 'Shift' | 'Enter' | 'End';
+declare type Arrows = 'ArrowUp' | 'ArrowDown' | 'ArrowRight' | 'ArrowLeft';
+declare type Key = Alphabet | FKeys | SpecialKeys | Arrows | ShiftNum;
 export declare const createShortcutHook: (keys: Key[]) => (listener: () => void) => void;
 export declare const anyShortcut: (...hooks: ((listener: (() => void)) => void)[]) => (listener: () => void) => void;
 export {};
