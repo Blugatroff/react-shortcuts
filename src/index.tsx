@@ -1,6 +1,9 @@
 import React from 'react'
 
-type Key = 'Control' | 'a' | 'f' | 'F2' | 'Alt' | 'm'
+type Alphabet = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z'
+type FKeys = 'F1' | 'F2' | 'F3' | 'F4' | 'F5' | 'F6' | 'F7' | 'F8' | 'F9' | 'F10' | 'F11' | 'F12'
+type SpecialKeys = 'Control' | 'Alt'
+type Key = Alphabet | FKeys | SpecialKeys
 
 class KeysState {
   private keys: Map<string, boolean> = new Map()
